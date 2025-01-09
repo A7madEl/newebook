@@ -14,6 +14,7 @@ namespace eBook_Library_Service.Models
             F2bFilePath = null;
             MobiFilePath = null;
             PdfFilePath = null;
+            IsBorrowable = true;
         }
 
         public int BookId { get; set; }
@@ -51,6 +52,7 @@ namespace eBook_Library_Service.Models
 
         [StringLength(100, ErrorMessage = "Category cannot exceed 100 characters.")]
         public string Category { get; set; }
+        public bool IsBorrowable { get; set; }
 
         [NotMapped]
         public IFormFile ImageFile { get; set; }

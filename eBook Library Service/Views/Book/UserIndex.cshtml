@@ -204,10 +204,12 @@
                         <input type="hidden" name="isForBorrow" value="false" />
                         <button type="submit" class="btn btn-add-to-cart">Add to Cart</button>
                     </form>
-                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                    <!-- Borrow -->
+                    <form asp-controller="Book" asp-action="BorrowBook" method="post" data-ajax="true">
                         <input type="hidden" name="bookId" value="@book.BookId" />
-                        <input type="hidden" name="isForBorrow" value="true" />
-                        <button type="submit" class="btn btn-borrow">Borrow</button>
+                        <button type="submit" class="btn btn-borrow">
+                            <i class="fas fa-book"></i> Borrow
+                        </button>
                     </form>
                     <!-- Buy Now Button -->
                     <form asp-controller="Payment" asp-action="BuyNow" method="get">
@@ -217,6 +219,7 @@
                 </div>
             </div>
         </a>
+
 
         <script>
             // Countdown timer for each book

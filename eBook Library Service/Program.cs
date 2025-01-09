@@ -11,6 +11,7 @@ builder.Services.AddScoped<ShoppingCartService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<PayPalService>();
+builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<StripeService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));

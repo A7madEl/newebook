@@ -51,6 +51,13 @@
                     <div class="book-price">
 
                         <button type="button" class="btn btn-add-to-cart" data-toggle="modal" data-target="#addToCartModal">Add to Cart</button>
+                            <!-- Borrow -->
+                            <form asp-controller="Book" asp-action="BorrowBook" method="post" data-ajax="true">
+                                <input type="hidden" name="bookId" value="@book.BookId" />
+                                <button type="submit" class="btn btn-borrow">
+                                    <i class="fas fa-book"></i> Borrow
+                                </button>
+                            </form>
                     </div>
                 </div>
             </div>
